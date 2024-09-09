@@ -543,7 +543,7 @@ pub struct GetMiningInfoResult {
     #[serde(rename = "pooledtx")]
     pub pooled_tx: usize,
     pub chain: String,
-    pub warnings: String,
+    pub warnings: StringOrStringArray,
 }
 
 #[derive(Clone, PartialEq, Eq, Debug, Deserialize, Serialize)]
@@ -1071,7 +1071,7 @@ pub struct GetBlockchainInfoResult {
     #[serde(default)]
     pub softforks: HashMap<String, Softfork>,
     /// Any network and blockchain warnings.
-    pub warnings: String,
+    pub warnings: StringOrStringArray,
 }
 
 #[derive(Clone, PartialEq, Eq, Debug)]
