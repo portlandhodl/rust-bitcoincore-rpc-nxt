@@ -606,6 +606,7 @@ pub struct GetRawTransactionResult {
     pub hash: bitcoin::Wtxid,
     pub size: usize,
     pub vsize: usize,
+    pub weight: usize,
     pub version: u32,
     pub locktime: u32,
     pub vin: Vec<GetRawTransactionResultVin>,
